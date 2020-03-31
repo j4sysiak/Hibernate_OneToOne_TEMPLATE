@@ -25,10 +25,23 @@ public class MainClass {
 			// start a transaction
 			session.beginTransaction();
 			
-			//----------- Create a Instructor
-
+			// create the objects
 			
-		//-----------Create InstructorDetails	
+			Instructor tempInstructor = new Instructor("Madhu", "Patel", "madhu@luv2code.com");
+			
+			InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.youtube.com", "Guitar");		
+			
+			// associate the objects
+			tempInstructor.setInstructorDetail(tempInstructorDetail);
+			
+		
+			// save the instructor
+			//
+			// Note: this will ALSO save the details object
+			// because of CascadeType.ALL
+			//
+			System.out.println("Saving instructor: " + tempInstructor);
+			session.save(tempInstructor);
 
 			
 			// commit transaction
