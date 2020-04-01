@@ -28,7 +28,6 @@ public class MainClass {
 			// create the objects
 			
 			Instructor tempInstructor = new Instructor("Madhu", "Patel", "madhu@luv2code.com");
-			
 			InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.youtube.com", "Guitar");		
 			
 			// associate the objects
